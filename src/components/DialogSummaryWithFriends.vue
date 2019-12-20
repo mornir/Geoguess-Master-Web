@@ -9,7 +9,8 @@
         <v-card-text id="card-text">
           <v-row
             class="summary-text-container" 
-            v-for="text in summaryTexts">
+            v-for="text in summaryTexts"
+            :key="text.playerName">
             <v-col>
               <div class="align-center">
                 <span id="summary-text">
@@ -68,7 +69,7 @@
       },
     },
     watch: {
-      dialogSummary: function(newVal, oldVal) {
+      dialogSummary: function(newVal) {
         if (newVal == true) {
           this.updateRecord()
         }

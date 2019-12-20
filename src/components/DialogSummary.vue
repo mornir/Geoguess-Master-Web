@@ -81,7 +81,7 @@
       }
     },
     watch: {
-      dialogSummary: function(newVal, oldVal) {
+      dialogSummary: function(newVal) {
         if (newVal == true) {
           this.updateRecord()
         }
